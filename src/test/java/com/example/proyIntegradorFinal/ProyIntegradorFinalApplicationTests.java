@@ -17,7 +17,7 @@ import static org.mockito.Mockito.when;
 
 class ProyIntegradorFinalApplicationTests {
 
-	@Test
+	/*@Test
 	@DisplayName("Si el odontologo no existe, se tira la excepcion Resourse not found")
 	void test() {
 		//GIVEN
@@ -31,6 +31,6 @@ class ProyIntegradorFinalApplicationTests {
 		assertThrows(ResourceNotFoundException.class,() -> service.eliminar(3));
 
 
-	}
+	}*/
 
 }

@@ -36,7 +36,7 @@ public class Usuario implements UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return pass;
     }
 
     @Override

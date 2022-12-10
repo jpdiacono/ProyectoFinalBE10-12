@@ -22,22 +22,22 @@ public class OdontologoController {
         return odontologoService.listarOdontologos();
     }
 
-    @GetMapping("/odontologo/{id}")
+    @GetMapping("/odontologos/{id}")
     public Odontologo getById(@PathVariable Integer id) throws ResourceNotFoundException {
         return odontologoService.buscarOdontologo(id);
     }
 
-    @PostMapping("/odontologo/agregar")
+    @PostMapping("/odontologos/agregar")
     public void agregarOdontologo(@RequestBody Odontologo odontologo) throws BadRequestException {
         odontologoService.agregarOdontologo(odontologo);
     }
 
-    @DeleteMapping("/odontologo/borrar/{id}")
+    @DeleteMapping("/odontologos/borrar/{id}")
     public void eliminarOdontologo(@RequestBody Integer id) throws ResourceNotFoundException {
         odontologoService.borrarOdontologo(id);
     }
 
-    @PutMapping("/odontologo/actualizar")
+    @PutMapping("/odontologos/actualizar")
     public void actualizarOdontologo(@RequestBody Odontologo odontologo) throws ResourceNotFoundException {
         odontologoService.actualizarOdontologo(odontologo);
     }

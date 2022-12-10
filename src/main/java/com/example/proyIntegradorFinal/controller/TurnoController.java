@@ -24,22 +24,22 @@ public class TurnoController {
         return turnoService.listarTurnos();
     }
 
-    @GetMapping("/turno/{id}")
+    @GetMapping("/turnos/{id}")
     public Turno getById(@PathVariable Integer id) throws ResourceNotFoundException {
         return turnoService.buscarTurno(id);
     }
 
-    @PostMapping("/turno/agregar")
+    @PostMapping("/turnos/agregar")
     public void agregarTurno(@RequestBody TurnoDto turnoDto) throws ResourceNotFoundException {
         turnoService.agregarDTO(turnoDto);
     }
 
-    @DeleteMapping("/turno/borrar/{id}")
+    @DeleteMapping("/turnos/borrar/{id}")
     public void eliminarTurno(@RequestBody Integer id) throws ResourceNotFoundException {
         turnoService.borrarTurno(id);
     }
 
-    @PutMapping("/turno/actualizar")
+    @PutMapping("/turnos/actualizar")
     public void actualizarTurno(@RequestBody Turno turno) throws ResourceNotFoundException {
         turnoService.actualizarTurno(turno);
     }

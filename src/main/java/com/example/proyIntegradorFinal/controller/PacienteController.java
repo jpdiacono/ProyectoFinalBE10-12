@@ -22,22 +22,22 @@ public class PacienteController {
         return pacienteService.listarPacientes();
     }
 
-    @GetMapping("/paciente/{id}")
+    @GetMapping("/pacientes/{id}")
     public Paciente getById(@PathVariable Integer id) throws ResourceNotFoundException {
         return pacienteService.buscarPaciente(id);
     }
 
-    @PostMapping("/paciente/agregar")
+    @PostMapping("/pacientes/agregar")
     public void agregarPaciente(@RequestBody Paciente paciente) throws BadRequestException {
         pacienteService.agregarPaciente(paciente);
     }
 
-    @DeleteMapping("/paciente/borrar/{id}")
+    @DeleteMapping("/pacientes/borrar/{id}")
     public void eliminarPaciente(@RequestBody Integer id) throws ResourceNotFoundException {
         pacienteService.borrarPaciente(id);
     }
 
-    @PutMapping("/paciente/actualizar")
+    @PutMapping("/pacientes/actualizar")
     public void actualizarPaciente(@RequestBody Paciente paciente) throws ResourceNotFoundException {
         pacienteService.actualizarPaciente(paciente);
     }

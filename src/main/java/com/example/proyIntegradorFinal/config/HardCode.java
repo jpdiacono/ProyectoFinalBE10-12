@@ -20,9 +20,13 @@ public class HardCode implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
 
 
-        var usuario = new Usuario(null,"Juan","juanpa@gmail.com", new BCryptPasswordEncoder().encode("7777"), Rol.USER);
+        var usuarioUser = new Usuario(null,"Juan","juanpa@gmail.com", new BCryptPasswordEncoder().encode("7777"), Rol.USER);
 
-        usuarioRepository.save(usuario);
+        usuarioRepository.save(usuarioUser);
+
+        var usuarioAdmin = new Usuario(null,"Pablo","pablo@gmail.com", new BCryptPasswordEncoder().encode("7778"), Rol.ADMIN);
+
+        usuarioRepository.save(usuarioAdmin);
 
 
 

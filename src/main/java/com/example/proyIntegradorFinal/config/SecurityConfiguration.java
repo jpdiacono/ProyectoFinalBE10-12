@@ -22,7 +22,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.
                 authorizeRequests()
-                .antMatchers("/turno/**")
+                .antMatchers("/turnos/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated().and()
